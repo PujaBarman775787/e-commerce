@@ -617,29 +617,9 @@ section h2{
     font-size:32px;
   }
 } 
-@media (max-width: 768px) {
 
-  .hero-content h1 {
-    font-size: 28px;
-    text-align: center;
-  }
 
-  .hero-content p {
-    font-size: 14px;
-    text-align: center;
-  }
 
-  .email-box {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .email-box input,
-  .email-box button {
-    width: 100%;
-  }
-
-}
 
 
  
