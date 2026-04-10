@@ -1,0 +1,622 @@
+   *{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
+
+body{
+  background:#fff;
+  color:#222;
+}
+
+/* NAVBAR */
+.navbar{
+  position:fixed;
+  width:100%;
+  height:70px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 80px;
+  z-index:10;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(12px);
+}
+
+.logo{
+  color:white;
+  font-weight:700;
+}
+
+.btn{
+  background:white;
+  color:#000;
+  border:none;
+  padding:10px 20px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+/* HERO */
+.hero{
+  position:relative;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:white;
+}
+
+.bg-video{
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.overlay{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:700px;
+}
+
+.hero-content h1{
+  font-size:64px;
+}
+
+.hero-content p{
+  margin:20px 0;
+  color:#ddd;
+}
+
+/* EMAIL */
+.email-box{
+  display:flex;
+  background:rgba(255,255,255,0.15);
+  backdrop-filter:blur(10px);
+  border-radius:50px;
+  padding:6px;
+}
+
+.email-box input{
+  flex:1;
+  border:none;
+  background:transparent;
+  color:white;
+  padding:15px;
+}
+
+.email-box button{
+  background:#00a67e;
+  color:white;
+  border:none;
+  padding:12px 25px;
+  border-radius:40px;
+}
+
+/* BRANDS */
+/* =========================
+   BRANDS SECTION (FIXED)
+========================= */
+.brands{
+  text-align:center;
+  padding:120px 20px 80px;
+  background:#f9fafb;
+}
+
+.brands p{
+  font-size:14px;
+  letter-spacing:2px;
+  color:#6b7280;
+  margin-bottom:40px;
+}
+
+.logo-track{
+  display:flex;
+  gap:80px;
+  white-space:nowrap;
+  animation:scroll 25s linear infinite;
+  font-size:28px;
+  font-weight:600;
+  color:#111;
+}
+
+@keyframes scroll{
+  from{transform:translateX(0);}
+  to{transform:translateX(-50%);}
+}
+
+
+/* =========================
+   FEATURES SECTION (FIXED)
+========================= */
+.features{
+  padding:120px 80px;
+  background:#fff;
+}
+
+.features h2{
+  text-align:center;
+  font-size:42px;
+  margin-bottom:80px;
+  font-weight:700;
+}
+
+.feature-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:60px;
+  margin-bottom:100px;
+}
+
+.feature-row .text{
+  flex:1;
+}
+
+.feature-row h3{
+  font-size:32px;
+  margin-bottom:15px;
+}
+
+.feature-row p{
+  font-size:18px;
+  color:#555;
+  line-height:1.6;
+}
+
+.feature-row .image{
+  flex:1;
+  display:flex;
+  justify-content:center;
+}
+
+.feature-row img{
+  width:100%;
+  max-width:420px;
+  border-radius:16px;
+  box-shadow:0 30px 60px rgba(0,0,0,0.15);
+  transition:0.4s;
+}
+
+.feature-row img:hover{
+  transform:scale(1.05);
+}
+
+.reverse{
+  flex-direction:row-reverse;
+}
+
+
+/* =========================
+   CTA SECTION (FIXED)
+========================= */
+.cta{
+  text-align:center;
+  padding:120px 20px;
+  background:linear-gradient(135deg,#00a67e,#007f5f);
+  color:white;
+}
+
+.cta h2{
+  font-size:40px;
+  margin-bottom:25px;
+}
+
+.cta .btn{
+  background:white;
+  color:#000;
+  font-weight:600;
+  padding:14px 30px;
+  border-radius:30px;
+  transition:0.3s;
+}
+
+.cta .btn:hover{
+  transform:translateY(-3px);
+}
+
+
+/* =========================
+   FOOTER (FIXED)
+========================= */
+.footer{
+  background:#004c3f;
+  color:white;
+  padding:80px 60px 40px;
+}
+
+.cols{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:40px;
+  margin-bottom:40px;
+}
+
+.footer h4{
+  font-size:22px;
+}
+
+.footer h5{
+  margin-bottom:10px;
+  font-size:16px;
+}
+
+.footer p{
+  font-size:14px;
+  color:#ccc;
+  margin:6px 0;
+  cursor:pointer;
+}
+
+.footer p:hover{
+  color:white;
+}
+
+.copy{
+  text-align:center;
+  font-size:14px;
+  color:#aaa;
+}
+
+
+/* =========================
+   MOBILE FIX
+========================= */
+@media(max-width:900px){
+
+  .logo-track{
+    gap:40px;
+    font-size:20px;
+  }
+
+  .features{
+    padding:80px 20px;
+  }
+
+  .feature-row{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .reverse{
+    flex-direction:column;
+  }
+
+  .cols{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+/* SCROLL ANIMATION */
+.reveal{
+  opacity:0;
+  transform:translateY(60px);
+  transition:1s;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* MOBILE */
+@media(max-width:900px){
+  .feature-row{
+    flex-direction:column;
+    text-align:center;
+  }
+}
+/* =========================
+   ADVANCED SECTIONS
+========================= */
+
+.advanced{
+  padding:120px 80px;
+  background:#f8fafc;
+}
+
+.adv-box{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:60px;
+  margin-bottom:100px;
+}
+
+.adv-text h2{
+  font-size:38px;
+  margin-bottom:15px;
+}
+
+.adv-text p{
+  font-size:18px;
+  color:#555;
+  line-height:1.6;
+}
+
+.adv-img img{
+  width:100%;
+  max-width:450px;
+  border-radius:18px;
+  box-shadow:0 25px 60px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   STATS
+========================= */
+
+.stats{
+  display:flex;
+  justify-content:center;
+  gap:80px;
+  text-align:center;
+  padding:80px 20px;
+  background:#0f172a;
+  color:white;
+}
+
+.stats h3{
+  font-size:40px;
+  color:#00a67e;
+}
+
+.stats p{
+  color:#bbb;
+}
+
+/* =========================
+   TRUST SECTION
+========================= */
+
+.trust{
+  padding:120px 20px;
+  text-align:center;
+  background:white;
+}
+
+.trust h2{
+  font-size:40px;
+  margin-bottom:40px;
+}
+
+.trust-box{
+  background:#f3f4f6;
+  display:inline-block;
+  padding:40px;
+  border-radius:16px;
+}
+
+.trust-box h3{
+  margin-top:10px;
+}
+
+/* =========================
+   FAQ
+========================= */
+
+.faq{
+  padding:120px 80px;
+  background:#f9fafb;
+  text-align:center;
+}
+
+.faq h2{
+  font-size:40px;
+  margin-bottom:40px;
+}
+
+.faq-item{
+  background:white;
+  margin:10px auto;
+  padding:18px;
+  max-width:700px;
+  border-radius:10px;
+  text-align:left;
+  box-shadow:0 5px 20px rgba(0,0,0,0.05);
+  cursor:pointer;
+}
+
+/* =========================
+   FINAL CTA
+========================= */
+
+.final-cta{
+  padding:120px 20px;
+  text-align:center;
+  background:linear-gradient(135deg,#0f172a,#1e293b);
+  color:white;
+}
+
+.final-cta h2{
+  font-size:42px;
+  margin-bottom:25px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+
+  .adv-box{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .stats{
+    flex-direction:column;
+    gap:40px;
+  }
+}
+/* =========================
+   GLOBAL IMPROVEMENT
+========================= */
+
+section{
+  padding:120px 80px;
+}
+
+h1,h2,h3{
+  letter-spacing:-0.5px;
+}
+
+p{
+  line-height:1.7;
+}
+
+/* =========================
+   SECTION TITLE STYLE
+========================= */
+
+section h2{
+  font-size:44px;
+  text-align:center;
+  margin-bottom:60px;
+  font-weight:700;
+}
+
+/* =========================
+   FEATURES GRID UPGRADE
+========================= */
+
+.feature-row{
+  background:#fff;
+  padding:40px;
+  border-radius:20px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.06);
+  transition:0.3s;
+}
+
+.feature-row:hover{
+  transform:translateY(-5px);
+}
+
+/* =========================
+   ADVANCED BOX IMPROVE
+========================= */
+
+.adv-box{
+  background:white;
+  padding:50px;
+  border-radius:20px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.adv-box:hover{
+  transform:translateY(-6px);
+}
+
+/* =========================
+   STATS IMPROVED
+========================= */
+
+.stats{
+  background:linear-gradient(135deg,#0f172a,#111827);
+  border-radius:20px;
+  margin:0 80px;
+  padding:80px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:40px;
+}
+
+.stats div{
+  background:rgba(255,255,255,0.05);
+  padding:30px;
+  border-radius:16px;
+  backdrop-filter:blur(10px);
+}
+
+.stats h3{
+  font-size:48px;
+}
+
+/* =========================
+   TRUST BOX FIX
+========================= */
+
+.trust-box{
+  max-width:500px;
+  margin:0 auto;
+  background:white;
+  box-shadow:0 20px 60px rgba(0,0,0,0.08);
+  border-radius:20px;
+}
+
+/* =========================
+   FAQ CLEAN ACCORDION STYLE
+========================= */
+
+.faq-item{
+  max-width:800px;
+  margin:12px auto;
+  padding:20px 25px;
+  border-radius:12px;
+  background:white;
+  font-size:18px;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.faq-item:hover{
+  background:#f3f4f6;
+  transform:scale(1.02);
+}
+
+/* =========================
+   FINAL CTA FIX
+========================= */
+
+.final-cta{
+  background:linear-gradient(135deg,#0f172a,#1e293b);
+  border-radius:0;
+}
+
+.final-cta .email-box{
+  max-width:500px;
+  margin:0 auto;
+}
+
+/* =========================
+   FOOTER MODERN LOOK
+========================= */
+
+.footer{
+  background:#0b1220;
+}
+
+.footer .cols{
+  max-width:1100px;
+  margin:auto;
+}
+
+/* =========================
+   RESPONSIVE FIX
+========================= */
+
+@media(max-width:900px){
+
+  section{
+    padding:80px 20px;
+  }
+
+  .stats{
+    margin:0;
+    grid-template-columns:1fr;
+  }
+
+  section h2{
+    font-size:32px;
+  }
+} 
+
+
+ 
